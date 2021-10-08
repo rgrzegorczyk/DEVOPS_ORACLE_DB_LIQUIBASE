@@ -1,0 +1,4 @@
+BEGIN
+  DBMS_UTILITY.COMPILE_SCHEMA( schema => 'LIQUIBASE');
+END; 
+/ 

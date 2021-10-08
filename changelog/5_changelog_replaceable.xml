@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+  <includeAll path="/database/type"/>            
+  <includeAll path="/database/trigger" />   
+  <!--VIEWS -->  
+  <include file="database/view/emp_details_view.sql"/>
+  <!--PACKAGES -->          
+  <changeSet id="EMPLOYEES_PKG" author="rgrzegorczyk" runOnChange="true" context='v1'>
+    <preConditions onFail="HALT" onFailMessage="Table EMPLOYEES don't exists yet!">
+        <tableExists tableName="EMPLOYEES"/>
+    </preConditions>      
+          <sqlFile splitStatements="false" path="database/package/EMPLOYEES_PKG.pks"  encoding="UTF-8" />
+          <sqlFile splitStatements="false" path="database/package/EMPLOYEES_PKG.pkb"  encoding="UTF-8" />
+      <rollback>
+        drop package body EMPLOYEES_PKG;
+        drop package EMPLOYEES_PKG;
+      </rollback>
+    </changeSet>
+  <includeAll path="/database/procedure" />
+  <includeAll path="/database/function" />
+  <includeAll path="/database/synonym" />
+</databaseChangeLog>

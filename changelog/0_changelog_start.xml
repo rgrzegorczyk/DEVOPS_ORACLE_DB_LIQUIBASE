@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+            <changeSet  author="RGRZEGORCZYK"  id="welcome" runAlways="true" failOnError="true" runOrder="first" context='ALL'>
+                <preConditions onFail="WARN" onSqlOutput="TEST" onFailMessage="------------------------- WELCOME TO THE CONFERENCE! ------------------------- " >
+                    <sqlCheck expectedResult="25" >
+                        select 15 FROM DUAL;
+                    </sqlCheck>
+                </preConditions>                  
+                <sql  dbms="oracle">
+                    SELECT 1 FROM DUAL;
+                <comment>Sample select statement</comment>                
+                </sql>
+                <rollback>
+                      SELECT 1 FROM DUAL;
+                </rollback> 
+            </changeSet>
+            <changeSet  author="RGRZEGORCZYK"  id="validate_objects" runAlways="true" context='ALL'>
+                <preConditions onFail="HALT" onSqlOutput="TEST" onFailMessage="You have invalid objects in your schema!" >
+                    <sqlCheck expectedResult="0" >
+                        select count(*) from user_objects where status!='VALID'
+                    </sqlCheck>
+                </preConditions>                  
+                <sql  dbms="oracle">
+                    SELECT 1 FROM DUAL;
+                <comment>Validate objects</comment>                
+                </sql>
+                <rollback>
+                      SELECT 1 FROM DUAL;
+                </rollback> 
+            </changeSet>                               
+</databaseChangeLog>
