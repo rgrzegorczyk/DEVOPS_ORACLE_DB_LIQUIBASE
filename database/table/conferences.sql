@@ -11,7 +11,7 @@ CREATE TABLE conferences
         	     PRIMARY KEY (id) 
     );
 
---changeset jkowalski:add_dates_columns context:CR_conferences labels:JIRA_TASK_2
+--changeset john:add_dates_columns context:CR_conferences labels:JIRA_TASK_2
 --comment new column
 --comment Add date columns
 --rollback  ALTER TABLE conferences DROP (date_from, date_to);
