@@ -27,4 +27,12 @@ IS 'Region ID for the country. Foreign key to region_id column in the department
 --rollback ALTER TABLE countries DROP COLUMN universe_id;
 ALTER TABLE countries ADD universe_id NUMBER;
 
+--changeset rafal:add_missing_comment context:PROD_FIX  labels:JIRA_TASK_PROD_FIX_1
+--comment Missing column
+--rollback COMMENT ON COLUMN countries.universe_id IS '';  
+COMMENT ON COLUMN countries.universe_id
+IS 'Id of the universe to which country belongs';    
+
+
+
 
