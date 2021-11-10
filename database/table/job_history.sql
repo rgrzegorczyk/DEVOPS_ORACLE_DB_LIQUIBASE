@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:create_job_history_table runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:create_job_history_table runOnChange:false failOnError:true context:v1 labels:v1
 --comment  Create the JOB_HISTORY table to hold the history of jobs that  employees have held in the past. JOBS, HR_DEPARTMENTS, and EMPLOYEES have a foreign key to this table.
 --rollback  DROP TABLE job_history CASCADE CONSTRAINTS;
 CREATE TABLE job_history

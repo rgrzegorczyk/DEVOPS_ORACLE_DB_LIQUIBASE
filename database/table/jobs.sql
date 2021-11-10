@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:create_jobs_table runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:create_jobs_table runOnChange:false failOnError:true context:v1 labels:v1
 --comment Create the JOBS table to hold the different names of job roles within the company. EMPLOYEES has a foreign key to this table.
 --rollback  DROP TABLE jobs CASCADE CONSTRAINTS;
 CREATE TABLE jobs

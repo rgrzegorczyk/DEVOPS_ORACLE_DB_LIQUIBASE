@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:create_locations_table runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:create_locations_table runOnChange:false failOnError:true context:v1 labels:v1
 --comment Create the LOCATIONS table to hold address information for company departments. DEPARTMENTS has a foreign key to this table.
 --rollback  DROP TABLE locations CASCADE CONSTRAINTS;
 CREATE TABLE locations

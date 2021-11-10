@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:populate_v1 runOnChange:false stripComments:true context:v1
+--changeset rgrzegorczyk:populate_v1 runOnChange:false stripComments:true context:v1 labels:v1
 --comment Populate data v1
 --rollback TRUNCATE TABLE job_history;
 --rollback ALTER TABLE departments DISABLE CONSTRAINT dept_mgr_fk;

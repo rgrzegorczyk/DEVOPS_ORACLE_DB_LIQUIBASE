@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:update_job_history_trg runOnChange:true stripComments:false context:v1
+--changeset rgrzegorczyk:update_job_history_trg runOnChange:true stripComments:false context:v1 labels:v1
 --rollback DROP TRIGGER update_job_history_trg;
 CREATE OR REPLACE TRIGGER update_job_history_trg
   AFTER UPDATE OF job_id, department_id ON employees

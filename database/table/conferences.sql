@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:conferences_table context:CR_conferences labels:JIRA_TASK_1
+--changeset rafal:conferences_table context:CR_conferences labels:JIRA_TASK_1
 --comment Create conferences name.
 --rollback  DROP TABLE conferences PURGE;
 CREATE TABLE conferences 

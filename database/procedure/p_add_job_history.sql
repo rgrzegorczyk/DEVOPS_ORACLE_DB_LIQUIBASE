@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:p_add_job_history runOnChange:true stripComments:false context:v1
+--changeset rgrzegorczyk:p_add_job_history runOnChange:true stripComments:false context:v1 labels:v1
 --rollback DROP PROCEDURE p_add_job_history;
 CREATE OR REPLACE PROCEDURE p_add_job_history
   (  p_emp_id          job_history.employee_id%type

@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:create_EMPLOYEES_table runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:create_EMPLOYEES_table runOnChange:false failOnError:true context:v1 labels:v1
 --comment Create the EMPLOYEES table to hold the employee personnel  information for the company. EMPLOYEES has a self referencing foreign key to this table.
 --rollback  DROP TABLE EMPLOYEES CASCADE CONSTRAINTS;
 CREATE TABLE employees

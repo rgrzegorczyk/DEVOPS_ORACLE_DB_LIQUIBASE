@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:create_departments_table runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:create_departments_table runOnChange:false failOnError:true context:v1 labels:v1
 --comment Create the DEPARTMENTS table to hold company department information. EMPLOYEES and JOB_HISTORY have a foreign key to this table.
 --rollback  DROP TABLE departments CASCADE CONSTRAINTS;
 CREATE TABLE departments

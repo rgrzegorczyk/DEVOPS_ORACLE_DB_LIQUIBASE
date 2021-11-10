@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:create_UNIVERSES_table runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:create_UNIVERSES_table runOnChange:false failOnError:true context:v1 labels:v1
 --comment Create the UNIVERSES table
 --rollback  DROP TABLE UNIVERSES PURGE;
 CREATE TABLE UNIVERSES 

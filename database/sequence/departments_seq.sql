@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:create_departments_seq runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:create_departments_seq runOnChange:false failOnError:true context:v1 labels:v1
 --rollback  DROP SEQUENCE departments_seq;
 CREATE SEQUENCE departments_seq
  START WITH     280

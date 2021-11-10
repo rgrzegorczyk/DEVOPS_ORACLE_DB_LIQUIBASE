@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:p_secure_dml runOnChange:true stripComments:false context:v1
+--changeset rgrzegorczyk:p_secure_dml runOnChange:true stripComments:false context:v1 labels:v1
 --rollback DROP PROCEDURE p_secure_dml;
 CREATE OR REPLACE PROCEDURE p_secure_dml
 IS

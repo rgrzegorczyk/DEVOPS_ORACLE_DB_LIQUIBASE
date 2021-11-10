@@ -9,7 +9,7 @@
   <!--VIEWS -->  
   <include file="database/view/emp_details_view.sql"/>
   <!--PACKAGES -->          
-  <changeSet id="EMPLOYEES_PKG" author="rgrzegorczyk" runOnChange="true" context='v1'>
+  <changeSet id="EMPLOYEES_PKG" author="rgrzegorczyk" runOnChange="true" context='v1' labels='v1'>
     <preConditions onFail="HALT" onFailMessage="Table EMPLOYEES don't exists yet!">
         <tableExists tableName="EMPLOYEES"/>
     </preConditions>      

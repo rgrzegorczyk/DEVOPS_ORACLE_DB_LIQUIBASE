@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:countr_reg_fk runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:countr_reg_fk runOnChange:false failOnError:true context:v1 labels:v1
 --comment countries to regions FK
 --rollback  ALTER TABLE countries DROP CONSTRAINT countr_reg_fk;
 ALTER TABLE countries

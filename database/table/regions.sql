@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:create_REGIONS_table runOnChange:false failOnError:true context:v1
+--changeset rgrzegorczyk:create_REGIONS_table runOnChange:false failOnError:true context:v1 labels:v1
 --comment Create the REGIONS table to hold region information for locations. LOCATIONS table has a foreign key to this table. 
 --rollback  DROP TABLE regions CASCADE CONSTRAINTS;
 create table regions (

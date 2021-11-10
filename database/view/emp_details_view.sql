@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset rgrzegorczyk:emp_details_view runOnChange:true failOnError:true context:v1
+--changeset rgrzegorczyk:emp_details_view runOnChange:true failOnError:true context:v1 labels:v1
 --comment  Create the EMP_DETAILS_VIEW that joins the employees, jobs, departments, jobs, countries, and locations table to provide details about employees.
 --rollback  DROP VIEW emp_details_view;
 CREATE OR REPLACE VIEW emp_details_view
